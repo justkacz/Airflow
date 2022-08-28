@@ -2,7 +2,6 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 
 from datetime import datetime, timedelta
-
 from urllib import request
 import os.path
 from airflow.operators.python import PythonOperator
@@ -52,7 +51,7 @@ def python_zip(execution_date):
         f"pageviews-{year}{month:0>2}{day:0>2}-{hour:0>2}0000.gz"
         )
 
-    path=os.path.join('C:\\Users\\jkaczmarek\\OneDrive - DXC Production\\Desktop\\TEST\\airflow', 'zipfile')
+    path=os.path.join('/home/justkacz', 'zipfile')
 
     if os.path.isdir(path):
         request.urlretrieve(url, os.path.join(path, "wikipageviews.gz"))

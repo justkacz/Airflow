@@ -26,7 +26,6 @@ def python_zip(**context):
         f"pageviews-{year}{month:0>2}{day:0>2}-{hour:0>2}0000.gz"
         )
 
-    #path=os.path.join('C:\\Users\\jkaczmarek\\OneDrive - DXC Production\\Desktop\\TEST\\airflow', 'zipfile')
     path=os.path.join('/home/justkacz', 'zipfile')
 
 
